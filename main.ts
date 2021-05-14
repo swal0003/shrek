@@ -227,7 +227,7 @@ story.startCutscene(function () {
     story.printText("You:im " + game.askForString(""), 75, 100)
     story.printText("Donkey: sorry im in such a rush! Im going off to see shrek! Do you know him? Hes the best!", 75, 100)
     story.showPlayerChoices("Yes of course i know him!", "I just came from his house!")
-    if (story.getLastAnswer() == "Never") {
+    if (story.getLastAnswer() == "Yes of course i know him!") {
         story.printText("You:Yes of course i know him!", 75, 100)
     } else {
         story.printText("You:I just came from his house!", 75, 100)
