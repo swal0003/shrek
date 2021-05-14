@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.1"
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.1",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0"
     },
     "files": [
         "main.blocks",

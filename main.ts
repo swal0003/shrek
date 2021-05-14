@@ -223,4 +223,16 @@ story.startCutscene(function () {
         `, SpriteKind.Player)
     donk.setPosition(120, 70)
     story.printText("Donkey: hi im donkey! And you are?", 75, 100)
+    story.printText("You: hi donkey!", 75, 100)
+    story.printText("You:im " + game.askForString(""), 75, 100)
+    story.printText("Donkey: sorry im in such a rush! Im going off to see shrek! Do you know him? Hes the best!", 75, 100)
+    story.showPlayerChoices("Yes of course i know him!", "I just came from his house!")
+    if (story.getLastAnswer() == "") {
+        story.printText("You:Yes of course i know him!", 75, 100)
+    } else {
+        story.printText("You:I just came from his house!", 75, 100)
+    }
+    story.printText("Donkey: thats so cool! I havennt seen shrek in a while so im very exited!", 75, 100)
+    story.printText("You: cool.", 75, 100)
+    story.printText("Donkey: hey quickly, dragon is off with the kids and i have no ride can you drive me?", 75, 100)
 })
