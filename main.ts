@@ -1,5 +1,6 @@
-function intro () {
+function story2 () {
     story.startCutscene(function () {
+        donky_love_points = 0
         srhek = sprites.create(img`
             7777777777777777777777777777777777777777777777777777777777777777
             7777777777777777777777777777777777777777777777777777777777777777
@@ -221,8 +222,8 @@ function intro () {
             `, SpriteKind.Player)
         donk.setPosition(120, 70)
         story.printText("Donkey: hi im donkey! And you are?", 75, 100)
-        story.printText("You: hi donkey!", 75, 100)
-        story.printText("You:im " + game.askForString(""), 75, 100)
+        story.printText("You: hi donkey im!", 75, 100)
+        story.printText(game.askForString(""), 75, 100)
         story.printText("Donkey: sorry im in such a rush! Im going off to see shrek! Do you know him? Hes the best!", 75, 100)
         story.showPlayerChoices("Yes of course i know him!", "I just came from his house!")
         if (story.getLastAnswer() == "Yes of course i know him!") {
@@ -233,9 +234,24 @@ function intro () {
         story.printText("Donkey: thats so cool! I havennt seen shrek in a while so im very exited!", 75, 100)
         story.printText("You: cool.", 75, 100)
         story.printText("Donkey: hey quickly, dragon is off with the kids and i have no ride can you drive me?", 75, 100)
+        story.showPlayerChoices("of course!", "i would rather not...")
+        if (story.getLastAnswer() == "of course!") {
+            story.printText("you: of course!", 75, 100)
+            donky_love_points += 1
+            story.printText("donkeys love points changed by 1", 75, 100)
+        } else {
+            story.printText("you: i would rather not...", 75, 100)
+        }
+        story.printText("Donkey: ( jumps into car) awesome! Lets go!", 75, 100)
+        story.printText("(now in car)", 75, 100)
+        story.printText("Donkey: so what do you do for a living?", 75, 100)
+        story.printText("i work as a" + game.askForString(""), 75, 100)
+        story.printText("Donkey: thats so cool !", 75, 100)
+        story.printText("Donkey: thats so cool !", 75, 100)
     })
 }
 let donk: Sprite = null
 let far: Sprite = null
 let srhek: Sprite = null
-intro()
+let donky_love_points = 0
+story2()
